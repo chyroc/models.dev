@@ -2,7 +2,8 @@
 # CNY→USD rate: 6.737012, 2026-08-26, source: https://open.er-api.com/v6/latest/USD
 # CNY list price source: https://www.volcengine.com/docs/82379/1544106
 # Toggle: thinking.type = enabled|disabled
-# Effort: reasoning_effort = minimal|low|medium|high
+# Effort: reasoning_effort = none|minimal|low|medium|high|xhigh|max
+# (all seven verified accepted; none/minimal return reasoning_tokens = 0)
 base_model = "zhipuai/glm-5.2"
 
 [[reasoning_options]]
@@ -10,7 +11,7 @@ type = "toggle"
 
 [[reasoning_options]]
 type = "effort"
-values = ["minimal", "low", "medium", "high"]
+values = ["none", "minimal", "low", "medium", "high", "xhigh", "max"]
 
 [interleaved]
 field = "reasoning_content"
